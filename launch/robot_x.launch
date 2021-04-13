@@ -1,0 +1,19 @@
+<launch>
+  
+  <!-- Setting Global parameters -->
+  <param name="/robot_name" type="string" value="Robo X" />
+  <param name="/robot_max_speed" type="double" value="0.5" />
+  <param name="/initial_post_x" type="double" value="0" />
+  <param name="/initial_post_y" type="double" value="0" />
+  <param name="/max_cordinate" type="double" value="50" />
+  <param name="/min_cordinate" type="double" value="-50" />
+
+  <!-- Initializing nodes in the right order -->
+  <node name="temp_pub_node" pkg="robot_x" type="temp_pub_node.py"/>
+  <node name="humid_pub_node" pkg="robot_x" type="humid_pub_node.py"/>
+  <node name="speed_pub_node" pkg="robot_x" type="speed_pub_node.py"/>
+  <node name="position_pub_node" pkg="robot_x" type="position_pub_node.py"/>
+  <node name="speech_gen_service_node" pkg="robot_x" type="speech_gen_service_node.py"/>
+  <node name="walk_to_point_action_server_node" pkg="robot_x" type="walk_to_point_action_server.py"/>
+
+</launch>

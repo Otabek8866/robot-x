@@ -1,0 +1,8 @@
+#Goal
+robot_x/PositionAndDestination destin
+---
+#Result
+float32 time_spent
+---
+#Feedback
+float32 distance
